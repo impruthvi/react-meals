@@ -1,14 +1,15 @@
 import classes from "./Cart.module.css";
+import Model from "../UI/Modal";
 const Cart = () => {
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {[{ id: "c1", name: "Sushi", amount: "1", price: 100 }].map((item) => {
-        <li>{item.name}</li>;
+        return <li>{item.name}</li>;
       })}
     </ul>
   );
   return (
-    <div>
+    <Model>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
@@ -18,7 +19,7 @@ const Cart = () => {
         <button className={classes["button--alt"]}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Model>
   );
 };
 
