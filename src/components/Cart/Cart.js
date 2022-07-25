@@ -1,3 +1,4 @@
+
 import classes from "./Cart.module.css";
 import Model from "../UI/Modal";
 const Cart = (props) => {
